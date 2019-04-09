@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Abhay</title>
+</head>
+<body>
+<code>
+	Hello World
+</code>
+<br>
+<a href="./page2.html">Page2</a>
+<a href="./page3.html">Page3</a>
+<BUTTON onClick="PeecheJao()">Back</BUTTON>
+<button onclick="Forward()">Forward</button>
+<button onclick="googlego()">Go</button>
+<script type="text/javascript">
+	
+	function PeecheJao() {
+		// body...
+		window.history.back();
+	}
+
+	function Forward(){
+		window.history.forward();
+	}
+
+	function googlego(){
+		window.history.go(-1);
+	}
+</script>
+</body>
+</html>

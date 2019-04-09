@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List And Forms</title>
+</head>
+<body>
+<ol id="list">
+	<li id="Nolan">
+		Nolan
+	</li>
+	<li id="Steven Spielberg">
+		Steven Spielberg
+	</li>
+	<li id="Kubrick">
+		Stanley Kubrick
+	</li>
+	<li id="Micahel Bay">
+		Michael Bay
+	</li>
+</ol>
+<input type="text" name="entry text" id="Entry" onfocus="Change()">
+<BUTTON onClick="Add()">OK</BUTTON>
+
+<script type="text/javascript">
+
+	function Change()
+	{
+		document.getElementById('Entry').style.background="#e6891d";
+	}
+
+	function blur(){
+		document.getElementById('Entry').style.background="Red";
+	}
+
+	function Add() {
+		
+		var a = document.getElementById('Entry').value;
+
+
+		var para=document.createElement("li");
+		var node=document.createTextNode(a);
+		para.appendChild(node);
+		para.id=a;
+
+		var element =document.getElementById('list');
+		element.appendChild(para);
+	}
+	
+</script>
+</body>
+</html>

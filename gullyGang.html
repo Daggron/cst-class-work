@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CUPB17109910225</title>
+</head>
+<body>
+	
+
+	<ul id="list">
+		<li id="c++" value="c++">
+			C++
+		</li>
+		<li id="java" value="java">
+			Java
+		</li>
+		<li id="web" value="web">
+			Web
+		</li>
+	</ul>
+	<p id="text"></p>
+	<input type="text" id="RemoveName" placeholder="Enter Name Here">
+	<input type="Button" value="Create" onclick="Insert()" name="">
+	
+	<input type="Button" onclick="remove()" value="Remove">
+	
+	<script type="text/javascript">
+
+		var arr=[];
+		arr=["java","Web","Java","web","c++"];
+
+   
+
+
+		function Insert() {
+			//Thanos is going to die in avengers endgame
+			var a =document.getElementById("RemoveName").value;
+		var para=document.createElement("li");
+		var node=document.createTextNode(a);
+		para.appendChild(node);
+		para.id=a;
+
+		var element =document.getElementById('list');
+		element.appendChild(para);
+        	arr.push(a);
+		}
+		
+		
+		function remove(){
+			var x=document.getElementById('RemoveName').value;
+			
+
+			var n=arr.includes(x);
+
+			if(n){
+			var para=document.getElementById('list');
+			var child=document.getElementById(x);
+			para.removeChild(child);
+			document.getElementById("text").innerHTML="Successfully Deleted";
+
+			}
+			else{
+				document.getElementById("text").innerHTML="Element Not in the list";
+			}
+
+		}
+		
+	
+	</script>
+
+</body>
+</html>

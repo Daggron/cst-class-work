@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+
+	<p id="places"></p>
+	<br>
+	<p id="Length"></p>
+	<br>
+	<p id="Sort"></p>
+	<p id="push"></p>
+	<p id="pop"></p>
+	<p id="slice"></p>
+	<p id="splice"></p>
+	<p id="newarr"></p>
+	<p id="slice1"></p>
+	<p id="merge"></p>
+	<p id="reverse"></p>
+	<p id="indexOf"></p>
+	<p id="lastIndexOf"></p>
+
+	<input type="text" name="Abhay" id="text1" placeholder="Enter First Word Here"><br>
+	<input type="text" name="Abhay2" id="text1" placeholder="Enter Second Word Here"><br>
+	<input type="text" name="Abhay3" id="text2" placeholder="Enter Third Word Here"><br>
+	<input type="text" name="Abhay4" id="text4" placeholder="Enter Fourth Word Here"><br>
+
+
+	<script>
+		var array=['Delhi','Kolkalta','Chennai','ZirakPur','Banglore','Mysoore','St.louis','Shazam','Gotham','Batman'];
+		document.getElementById('places').innerHTML=array;
+
+		var len = array.length;
+		document.getElementById('Length').innerHTML=len;
+
+		var sort = array.sort();
+
+		document.getElementById("Sort").innerHTML=sort;
+
+		array.push("Bernoulli");
+
+
+		document.getElementById("push").innerHTML=array;
+
+		array.pop();
+
+		document.getElementById("pop").innerHTML=array;
+
+		array.splice(0,1);
+
+		document.getElementById("slice").innerHTML=array;
+
+
+		array.splice(2,2,"Abhay","Shazam");
+
+		document.getElementById("splice").innerHTML=array;
+
+		var x=array.join("*");
+		document.getElementById("newarr").innerHTML=x;
+
+	
+		document.getElementById("slice1").innerHTML=array.slice(0,5);
+
+		
+		document.getElementById("merge").innerHTML=array.concat(x);
+
+		document.getElementById("reverse").innerHTML=array.reverse();
+
+		document.getElementById("indexOf").innerHTML=array.indexOf("Mysoore");
+
+		document.getElementById("lastIndexOf").innerHTML=array.indexOf("Batman");
+
+
+	</script>
+
+</body>
+</html>

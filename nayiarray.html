@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NAyi ARray</title>
+</head>
+<body>
+
+	<input type="text" name="Abhay" id="text" placeholder="Enter First Word Here"><br>
+	<input type="text" name="Abhay2" id="text1" placeholder="Enter Second Word Here"><br>
+	<input type="text" name="Abhay3" id="text2" placeholder="Enter Third Word Here"><br>
+	<input type="text" name="Abhay4" id="text4" placeholder="Enter Fourth Word Here"><br>
+	<input type="button" onclick="add()" value="display">
+	<input type="button" onclick="pop()" value="Pop">
+	<p id="arraytext"></p>
+	<p id="poparray"></p>
+	<p id="Add">
+		<input type="button" onclick="newarr()" value="push">
+	</p>
+<script type="text/javascript">
+	
+	var array=[];
+
+function add() {
+	// body...
+	var a=document.getElementById('text');
+	var b=document.getElementById('text1');
+	var c=document.getElementById('text2');
+	var d=document.getElementById('text4');
+    array=[a.value,b.value,c.value,d.value];
+	document.getElementById("arraytext").innerHTML=array;
+}
+
+function pop(){
+	var new1=array;
+	new1.pop();
+	document.getElementById("poparray").innerHTML=new1;
+}
+
+function newarr(){
+	document.getElementById("Add").innerHTML="<input type='text' id='text5' placeholder='add text here'><br> <input type='button' value='display' onclick='Done()'>"
+}
+
+function Done(){
+	var x=document.getElementById("text5");
+	array.push(x.value);
+	document.getElementById("arraytext").innerHTML=array;
+}
+	
+
+</script>
+
+</body>
+</html>

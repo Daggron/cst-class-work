@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select</title>
+</head>
+<body>
+<input type="text" id="Country" value="India" onchange="ALarm()">
+<br>
+<label>Select Cartoon Here</label><br>
+<select id="Cartoons">
+	<option>Shinchan</option>
+	<option>Kochikame</option>
+	<option>Doremon</option>
+	<option>Pokemon</option>
+	<option>Inazuma Eleven</option>
+	<option>Beyblade</option>
+	<option>Kitretsu</option>
+</select>
+<input type="button" value="OK" onclick="GetElement()" name="">
+
+<p id="texty"></p>
+
+<script type="text/javascript">
+
+	function GetElement(){
+		var e = document.getElementById("Cartoons");
+		var selected = e.options[e.selectedIndex].value;
+		document.getElementById("texty").innerHTML="You Have Selected "+selected;
+	}
+
+
+	function ALarm() {
+		
+
+		alert("Properties Can't be Changed");
+		document.getElementById('Country').value="INDIA";
+	}
+</script>
+</body>
+</html>

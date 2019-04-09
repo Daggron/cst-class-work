@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CUPB17109910225</title>
+</head>
+<body>
+	
+
+	<ul id="list">
+		<li id="c++">
+			C++
+		</li>
+		<li id="java">
+			Java
+		</li>
+		<li id="web">
+			Web
+		</li>
+	</ul>
+	<input type="text" id="RemoveName" placeholder="Enter Name Here">
+	<input type="Button" value="Create" onclick="Insert()" name="">
+	<input type="Button" value="Insert" onclick="mid()" name="">
+	<input type="Button" onclick="remove()" value="Remove">
+	<input type="Button" onclick="replace()" value="RePlace">
+	<script type="text/javascript">
+
+		function Insert() {
+			//Thanos is going to die in avengers endgame
+		var para=document.createElement("li");
+		var node=document.createTextNode("DBMS");
+		para.appendChild(node);
+
+		var element =document.getElementById('list');
+		element.appendChild(para);
+		}
+		
+		function mid(){
+		var para=document.createElement("li");
+		var node=document.createTextNode("Networking");
+		para.appendChild(node);
+
+		var  element=document.getElementById('list');
+		var child=document.getElementById('web');
+		child.createId('Networking');
+		element.insertBefore(para,child);
+		}
+
+		function remove(){
+			var x=document.getElementById('RemoveName').value;
+			var para=document.getElementById('list');
+			var child=document.getElementById(x);
+			para.removeChild(child);
+		}
+		function replace(){
+			var y = document.createElement("li");
+			var node=document.createTextNode("Holo");
+
+			y.appendChild(node);
+
+			var child=document.getElementById('java');
+			append.replaceChild(child,y);
+		}
+	
+	</script>
+
+</body>
+</html>

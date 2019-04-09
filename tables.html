@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 40px;
+  width: 400px;
+}
+#Warn{
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<table id="deadpool">
+  <tr>
+    <td>Thanos</td>
+    <td>Gauntlet</td>
+  </tr>
+  <tr>
+    <td>Captain America</td>
+    <td>Shield</td>
+  </tr>
+  <tr>
+    <td>Tony Stark</td>
+    <td>Iron man suit</td>
+  </tr>
+</table>
+<br>
+<input type="number" id="Position" name="position" placeholder="At which position">
+<button onclick="insertRow()">Insert Row</button>
+
+<p id="Data"></p>
+<p id="Column"></p>
+<p id="button"></p>
+<p id="Warn"></p>
+
+<script>
+
+function insertRow(){
+  document.getElementById("Data").innerHTML='<input type="text" id="col1data" placeholder="insert column1 data here">';
+    document.getElementById("Column").innerHTML='<input type="text" id="col2data" placeholder="insert column2 data here">';
+      document.getElementById("button").innerHTML='<input type="button" id="submit" value="Insert" onclick="Thanos()">';
+
+}
+
+
+
+function Thanos() {
+
+  var rows = document.getElementById("deadpool").getElementsByTagName("tr").length;
+  var position = document.getElementById("Position").value;
+  position=Number(position);
+
+  if(position<=rows){
+  var table = document.getElementById("deadpool");
+  var row = table.insertRow(position);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = document.getElementById("col1data").value;
+  cell2.innerHTML = document.getElementById("col2data").value;
+}
+else
+{
+  document.getElementById("Warn").innerHTML="Position is gretaer than the table rows";
+}
+}
+</script>
+
+</body>
+</html>
